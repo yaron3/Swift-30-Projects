@@ -7,31 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191804011EB67FC9007753C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191804001EB67FC9007753C4 /* AppDelegate.swift */; };
 		191804081EB67FC9007753C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 191804071EB67FC9007753C4 /* Assets.xcassets */; };
 		1918040B1EB67FC9007753C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191804091EB67FC9007753C4 /* LaunchScreen.storyboard */; };
-		191804131EB68093007753C4 /* FBMeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191804121EB68093007753C4 /* FBMeBaseViewController.swift */; };
 		191804161EB6819F007753C4 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191804151EB6819F007753C4 /* Specs.swift */; };
-		191804191EB68395007753C4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191804181EB68395007753C4 /* UIColor+Extension.swift */; };
-		1918041B1EB684F6007753C4 /* FBMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918041A1EB684F6007753C4 /* FBMeViewController.swift */; };
-		1918041D1EB686AA007753C4 /* FBMeBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918041C1EB686AA007753C4 /* FBMeBaseCell.swift */; };
 		191804201EB693D3007753C4 /* FBMeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918041F1EB693D3007753C4 /* FBMeUser.swift */; };
-		191804231EB69AF5007753C4 /* TableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191804221EB69AF5007753C4 /* TableKeys.swift */; };
+		4A8EA4CD2DB924250069BD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EA4C92DB924250069BD9B /* LaunchScreen.storyboard */; };
+		4A8EA4CE2DB924250069BD9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4CB2DB924250069BD9B /* ContentView.swift */; };
+		4A8EA4CF2DB924250069BD9B /* FacebookMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4CC2DB924250069BD9B /* FacebookMeApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		191803FD1EB67FC9007753C4 /* FacebookMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		191804001EB67FC9007753C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		191804071EB67FC9007753C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1918040A1EB67FC9007753C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1918040C1EB67FC9007753C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		191804121EB68093007753C4 /* FBMeBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBMeBaseViewController.swift; sourceTree = "<group>"; };
 		191804151EB6819F007753C4 /* Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specs.swift; sourceTree = "<group>"; };
-		191804181EB68395007753C4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		1918041A1EB684F6007753C4 /* FBMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBMeViewController.swift; sourceTree = "<group>"; };
-		1918041C1EB686AA007753C4 /* FBMeBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBMeBaseCell.swift; sourceTree = "<group>"; };
 		1918041F1EB693D3007753C4 /* FBMeUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBMeUser.swift; sourceTree = "<group>"; };
-		191804221EB69AF5007753C4 /* TableKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableKeys.swift; sourceTree = "<group>"; };
+		4A8EA4C82DB924250069BD9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A8EA4CB2DB924250069BD9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A8EA4CC2DB924250069BD9B /* FacebookMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookMeApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +58,10 @@
 		191803FF1EB67FC9007753C4 /* FacebookMe */ = {
 			isa = PBXGroup;
 			children = (
-				191804001EB67FC9007753C4 /* AppDelegate.swift */,
+				4A8EA4CA2DB924250069BD9B /* Base.lproj */,
+				4A8EA4CB2DB924250069BD9B /* ContentView.swift */,
+				4A8EA4CC2DB924250069BD9B /* FacebookMeApp.swift */,
 				191804171EB681B2007753C4 /* Helper */,
-				191804141EB68099007753C4 /* ViewController */,
-				1918041E1EB686B1007753C4 /* View */,
 				191804211EB69401007753C4 /* Model */,
 				191804091EB67FC9007753C4 /* LaunchScreen.storyboard */,
 				1918040C1EB67FC9007753C4 /* Info.plist */,
@@ -76,31 +70,12 @@
 			path = FacebookMe;
 			sourceTree = "<group>";
 		};
-		191804141EB68099007753C4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				191804121EB68093007753C4 /* FBMeBaseViewController.swift */,
-				1918041A1EB684F6007753C4 /* FBMeViewController.swift */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
 		191804171EB681B2007753C4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				191804151EB6819F007753C4 /* Specs.swift */,
-				191804181EB68395007753C4 /* UIColor+Extension.swift */,
-				191804221EB69AF5007753C4 /* TableKeys.swift */,
 			);
 			name = Helper;
-			sourceTree = "<group>";
-		};
-		1918041E1EB686B1007753C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1918041C1EB686AA007753C4 /* FBMeBaseCell.swift */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		191804211EB69401007753C4 /* Model */ = {
@@ -109,6 +84,14 @@
 				1918041F1EB693D3007753C4 /* FBMeUser.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4A8EA4CA2DB924250069BD9B /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				4A8EA4C92DB924250069BD9B /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8EA4CD2DB924250069BD9B /* LaunchScreen.storyboard in Resources */,
 				1918040B1EB67FC9007753C4 /* LaunchScreen.storyboard in Resources */,
 				191804081EB67FC9007753C4 /* Assets.xcassets in Resources */,
 			);
@@ -185,13 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1918041B1EB684F6007753C4 /* FBMeViewController.swift in Sources */,
+				4A8EA4CE2DB924250069BD9B /* ContentView.swift in Sources */,
+				4A8EA4CF2DB924250069BD9B /* FacebookMeApp.swift in Sources */,
 				191804161EB6819F007753C4 /* Specs.swift in Sources */,
-				1918041D1EB686AA007753C4 /* FBMeBaseCell.swift in Sources */,
-				191804011EB67FC9007753C4 /* AppDelegate.swift in Sources */,
-				191804131EB68093007753C4 /* FBMeBaseViewController.swift in Sources */,
-				191804191EB68395007753C4 /* UIColor+Extension.swift in Sources */,
-				191804231EB69AF5007753C4 /* TableKeys.swift in Sources */,
 				191804201EB693D3007753C4 /* FBMeUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +183,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				1918040A1EB67FC9007753C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4A8EA4C92DB924250069BD9B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A8EA4C82DB924250069BD9B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -334,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = FacebookMe/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = FacebookMe/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
