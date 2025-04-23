@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1931198D20D35E380079AC04 /* StopwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1931198C20D35E380079AC04 /* StopwatchTests.swift */; };
-		197BEE191C76E410005AD5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197BEE181C76E410005AD5E2 /* AppDelegate.swift */; };
-		197BEE1B1C76E410005AD5E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197BEE1A1C76E410005AD5E2 /* ViewController.swift */; };
 		197BEE1E1C76E410005AD5E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197BEE1C1C76E410005AD5E2 /* Main.storyboard */; };
 		197BEE201C76E410005AD5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197BEE1F1C76E410005AD5E2 /* Assets.xcassets */; };
 		197BEE231C76E410005AD5E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197BEE211C76E410005AD5E2 /* LaunchScreen.storyboard */; };
-		197BEE2D1C798B47005AD5E2 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197BEE2C1C798B47005AD5E2 /* Stopwatch.swift */; };
+		4A8EA42A2DB8EC520069BD9B /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4292DB8EC520069BD9B /* StopwatchModel.swift */; };
+		4A8EA42B2DB8EC520069BD9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4272DB8EC520069BD9B /* ContentView.swift */; };
+		4A8EA42C2DB8EC520069BD9B /* StopwatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4282DB8EC520069BD9B /* StopwatchApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +31,13 @@
 		1931198C20D35E380079AC04 /* StopwatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchTests.swift; sourceTree = "<group>"; };
 		1931198E20D35E380079AC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		197BEE151C76E410005AD5E2 /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		197BEE181C76E410005AD5E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		197BEE1A1C76E410005AD5E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		197BEE1D1C76E410005AD5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		197BEE1F1C76E410005AD5E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		197BEE221C76E410005AD5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		197BEE241C76E410005AD5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		197BEE2C1C798B47005AD5E2 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		4A8EA4272DB8EC520069BD9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A8EA4282DB8EC520069BD9B /* StopwatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchApp.swift; sourceTree = "<group>"; };
+		4A8EA4292DB8EC520069BD9B /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +88,10 @@
 		197BEE171C76E410005AD5E2 /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
-				197BEE181C76E410005AD5E2 /* AppDelegate.swift */,
-				197BEE1A1C76E410005AD5E2 /* ViewController.swift */,
-				197BEE2C1C798B47005AD5E2 /* Stopwatch.swift */,
 				197BEE1C1C76E410005AD5E2 /* Main.storyboard */,
+				4A8EA4272DB8EC520069BD9B /* ContentView.swift */,
+				4A8EA4282DB8EC520069BD9B /* StopwatchApp.swift */,
+				4A8EA4292DB8EC520069BD9B /* StopwatchModel.swift */,
 				197BEE1F1C76E410005AD5E2 /* Assets.xcassets */,
 				197BEE211C76E410005AD5E2 /* LaunchScreen.storyboard */,
 				197BEE241C76E410005AD5E2 /* Info.plist */,
@@ -213,9 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				197BEE1B1C76E410005AD5E2 /* ViewController.swift in Sources */,
-				197BEE2D1C798B47005AD5E2 /* Stopwatch.swift in Sources */,
-				197BEE191C76E410005AD5E2 /* AppDelegate.swift in Sources */,
+				4A8EA42A2DB8EC520069BD9B /* StopwatchModel.swift in Sources */,
+				4A8EA42B2DB8EC520069BD9B /* ContentView.swift in Sources */,
+				4A8EA42C2DB8EC520069BD9B /* StopwatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,13 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5WRH6356JL;
 				INFOPLIST_FILE = Stopwatch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yigu.Stopwatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaronj.Stopwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -443,13 +444,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5WRH6356JL;
 				INFOPLIST_FILE = Stopwatch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yigu.Stopwatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaronj.Stopwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
