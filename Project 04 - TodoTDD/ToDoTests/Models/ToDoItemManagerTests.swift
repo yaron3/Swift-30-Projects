@@ -104,10 +104,10 @@ class ToDoItemManagerTests: XCTestCase {
     let secondItem = ToDoItem(title: "Second")
     itemManager.add(secondItem)
     
-    NotificationCenter.default.post(name: UIApplication.willResignActiveNotification, object: nil)
+    itemManager.save()
   
-    XCTAssertEqual(itemManager?.toDoCount, 2)
-    XCTAssertEqual(itemManager?.item(at: 0), firstItem)
-    XCTAssertEqual(itemManager?.item(at: 1), secondItem)
+    XCTAssertEqual(itemManager.toDoCount, 2)
+    XCTAssertEqual(itemManager.item(at: 0), firstItem)
+    XCTAssertEqual(itemManager.item(at: 1), secondItem)
   }
 }
