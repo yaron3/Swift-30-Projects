@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="KkU-FU-C9a">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="KkU-FU-C9a">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Damascus.ttc">
-            <string>DamascusBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Product View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -32,7 +25,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAD-xs-rsO">
                                 <rect key="frame" x="20" y="104" width="335" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0we-hm-0d2">
@@ -60,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2916.5" y="360.5"/>
+            <point key="canvasLocation" x="4666.3999999999996" y="324.28785607196403"/>
         </scene>
         <!--Us-->
         <scene sceneID="Yc5-Uh-pht">
@@ -162,7 +155,7 @@
                     </subviews>
                 </scrollView>
             </objects>
-            <point key="canvasLocation" x="1942.5" y="-429.5"/>
+            <point key="canvasLocation" x="3108" y="-386.35682158920542"/>
         </scene>
         <!--Products Table View Controller-->
         <scene sceneID="4Uv-J7-For">
@@ -177,7 +170,7 @@
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JTX-XT-azt" id="rG0-R0-cel">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348.5" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -194,7 +187,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDF-Es-MXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474.5" y="360.5"/>
+            <point key="canvasLocation" x="3959.1999999999998" y="324.28785607196403"/>
         </scene>
         <!--Products-->
         <scene sceneID="SrK-bh-l2D">
@@ -213,7 +206,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08i-RL-yc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942" y="360"/>
+            <point key="canvasLocation" x="3107.1999999999998" y="323.83808095952025"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i92-W7-0R6">
@@ -232,14 +225,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AR-Fx-3PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="360"/>
+            <point key="canvasLocation" x="2256" y="323.83808095952025"/>
         </scene>
     </scenes>
     <resources>
-        <image name="button-addtocart" width="158" height="41"/>
+        <image name="button-addtocart" width="158.5" height="41"/>
         <image name="header-contact" width="375" height="125"/>
-        <image name="icon-about-email" width="34" height="34"/>
-        <image name="icon-about-phone" width="34" height="34"/>
-        <image name="icon-about-website" width="34" height="34"/>
+        <image name="icon-about-email" width="34.5" height="34.5"/>
+        <image name="icon-about-phone" width="34.5" height="34.5"/>
+        <image name="icon-about-website" width="34.5" height="34.5"/>
     </resources>
 </document>

@@ -22,8 +22,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view from its nib.
-    self.preferredContentSize = CGSize(width: UIScreen.main.applicationFrame.size.width, height: 37.0);
-    
+      let screenWidth = UIScreen.main.bounds.width
+      self.preferredContentSize = CGSize(width: screenWidth, height: 37.0)
     // This will be called before widgetPerformUpdate func
     displayCurrentWeather()
   }

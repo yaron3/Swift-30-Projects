@@ -83,14 +83,14 @@ class MainViewController: UIViewController {
   
   @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
     switch(gesture.state) {
-    case UIGestureRecognizerState.began:
+    case UIGestureRecognizer.State.began:
       guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
         break
       }
       collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-    case UIGestureRecognizerState.changed:
+    case UIGestureRecognizer.State.changed:
       collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
-    case UIGestureRecognizerState.ended:
+    case UIGestureRecognizer.State.ended:
       collectionView.endInteractiveMovement()
     default:
       collectionView.cancelInteractiveMovement()
@@ -205,34 +205,34 @@ extension MainViewController: UICollectionViewDataSource {
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-    let availableWidth = view.frame.width - paddingSpace
-    let widthPerItem = availableWidth / itemsPerRow
-    
-    if indexPath == largePhotoIndexPath {
-      let flickrPhoto = photoForIndexPath(indexPath: indexPath)
-      var size = collectionView.bounds.size
-      size.height -= topLayoutGuide.length
-      size.height -= (sectionInsets.top + sectionInsets.right)
-      size.width -= (sectionInsets.left + sectionInsets.right)
-      return flickrPhoto.sizeToFillWidthOfSize(size)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        if indexPath == largePhotoIndexPath {
+            let flickrPhoto = photoForIndexPath(indexPath: indexPath)
+            var size = collectionView.bounds.size
+            size.height -= view.safeAreaInsets.top
+            size.height -= (sectionInsets.top + sectionInsets.right)
+            size.width -= (sectionInsets.left + sectionInsets.right)
+            return flickrPhoto.sizeToFillWidthOfSize(size)
+        }
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
     }
     
-    return CGSize(width: widthPerItem, height: widthPerItem)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      insetForSectionAt section: Int) -> UIEdgeInsets {
-    return sectionInsets
-  }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return sectionInsets.left
-  }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
 }
 
 extension MainViewController: UICollectionViewDelegate {

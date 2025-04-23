@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - DataSource
-protocol HorizontalScrollerDataSource: class {
+protocol HorizontalScrollerDataSource: AnyObject {
   // number of views to present inside the horizontal scroller
   func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int
   
@@ -24,7 +24,7 @@ extension HorizontalScrollerDataSource {
 }
 
 // MARK: - Delegate
-protocol HorizontalScrollerDelegate: class {
+protocol HorizontalScrollerDelegate: AnyObject {
   
   // inform the delegate what the view at <index> has been clicked
   func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, didSelectViewAt index: Int)

@@ -94,23 +94,39 @@ extension ViewController {
     answerLabel.text = "detecting scene..."
     
     // Load the ML model through its generated class
-    guard let model = try? VNCoreMLModel(for: GoogLeNetPlaces().model) else {
-      fatalError("can't load Places ML model")
+    let config = MLModelConfiguration()
+
+    guard let coreMLModel = try? GoogLeNetPlaces(configuration: config) else {
+        fatalError("Failed to load GoogLeNetPlaces model")
+    }
+
+    guard let visionModel = try? VNCoreMLModel(for: coreMLModel.model) else {
+        fatalError("Failed to create VNCoreMLModel")
     }
     
     // Define a Vision request service with the ML model
-    let request = VNCoreMLRequest(model: model) { [weak self] request, error in
-      guard let results = request.results,
-        let topResult = results.first as? VNClassificationObservation else {
-          fatalError("unexpected result type from VNCoreMLRequest")
-      }
-      
-      // Update UI on main queue
-      let article = (["a", "e", "i", "o", "u"].contains(topResult.identifier.first!)) ? "an" : "a"
-      
-      DispatchQueue.main.async { [weak self] in
-        self?.answerLabel.text = "\(Int(topResult.confidence * 100))% it's \(article) \(topResult.identifier)"
-      }
+    let request = VNCoreMLRequest(model: visionModel) { [weak self] request, error in
+        guard error == nil else {
+            print("Vision error: \(error!.localizedDescription)")
+            return
+        }
+
+        guard let results = request.results as? [VNClassificationObservation],
+              let topResult = results.first else {
+            print("Unexpected or empty results from VNCoreMLRequest")
+            return
+        }
+
+        let identifier = topResult.identifier
+        let article = identifier.lowercased().hasPrefix("a") ||
+                      identifier.lowercased().hasPrefix("e") ||
+                      identifier.lowercased().hasPrefix("i") ||
+                      identifier.lowercased().hasPrefix("o") ||
+                      identifier.lowercased().hasPrefix("u") ? "an" : "a"
+
+        DispatchQueue.main.async { [weak self] in
+            self?.answerLabel.text = "\(Int(topResult.confidence * 100))% it's \(article) \(identifier)"
+        }
     }
     
     // Create a request handler with the image provided

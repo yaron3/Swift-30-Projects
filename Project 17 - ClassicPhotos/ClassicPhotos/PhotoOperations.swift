@@ -42,7 +42,7 @@ class PendingOperations {
   }()
 }
 
-class ImageDownloader: Operation {
+final class ImageDownloader: Operation, @unchecked Sendable {
   let photoRecord: PhotoRecord
   
   init(photoRecord: PhotoRecord) {
@@ -70,13 +70,13 @@ class ImageDownloader: Operation {
         photoRecord.state = .Failed
         photoRecord.image = UIImage(named: "Failed")
       }
-    } catch let error as NSError{
-      print(error.domain)
+    } catch let nsError as NSError{
+        print("Cocoa error: \(nsError.domain) (\(nsError.code)) — \(nsError.localizedDescription), url: \(photoRecord.url)")
     }
   }
 }
 
-class ImageFiltration: Operation {
+final class ImageFiltration: Operation, @unchecked Sendable {
   let photoRecord: PhotoRecord
   
   init(photoRecord: PhotoRecord) {

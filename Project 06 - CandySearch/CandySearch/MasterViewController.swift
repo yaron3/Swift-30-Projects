@@ -57,7 +57,7 @@ class MasterViewController: UITableViewController {
   // MARK: - Search Controller Setup
   func setupSearchController () {
     searchController.searchResultsUpdater = self
-    searchController.dimsBackgroundDuringPresentation = false
+    searchController.obscuresBackgroundDuringPresentation = true
     definesPresentationContext = true
     searchController.searchBar.scopeButtonTitles = ["All", "Chocolate", "Hard", "Other"]
     searchController.searchBar.delegate = self

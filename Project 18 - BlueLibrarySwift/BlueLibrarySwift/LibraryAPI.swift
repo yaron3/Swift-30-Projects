@@ -56,6 +56,7 @@ class LibraryAPI: NSObject {
       let imageView = userInfo["imageView"] as? UIImageView,
       let coverUrl = userInfo["coverUrl"] as? String,
       let filename = URL(string: coverUrl)?.lastPathComponent else {
+        print("Data missing from userInfo: \(notification.userInfo ?? [:])")
         return
     }
     

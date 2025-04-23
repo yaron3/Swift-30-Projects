@@ -22,37 +22,55 @@ class ListViewController: UITableViewController {
     fetchPhotoDetails()
   }
   
-  fileprivate func fetchPhotoDetails() {
-    let request = URLRequest(url: dataSourceURL!)
-    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    
-    NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) { response, data, error in
-      if let error = error {
-        let alert = UIAlertView(title:"Oops!", message: error.localizedDescription, delegate:nil, cancelButtonTitle:"OK")
-        alert.show()
-        return
-      }
-      
-      if let data = data {
-        do {
-          if let datasourceDictionary = try PropertyListSerialization.propertyList(from: data, options: PropertyListSerialization.ReadOptions(rawValue: 0), format: nil) as? [String: AnyObject] {
-            
-            for (name, url) in datasourceDictionary {
-              if let url = URL(string: url as! String) {
-                let photoRecord = PhotoRecord(name:name, url: url)
-                self.photos.append(photoRecord)
-              }
+    fileprivate func fetchPhotoDetails() {
+        guard let url = dataSourceURL else { return }
+        let request = URLRequest(url: url)
+
+        // (Deprecated since iOS 13; removed in iOS 15 — safe to just remove this)
+        // UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
+        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+
+                if let error = error {
+                    let alert = UIAlertController(title: "Oops!", message: error.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+
+                    if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                       let rootVC = scene.windows.first?.rootViewController {
+                        rootVC.present(alert, animated: true)
+                    }
+                    return
+                }
+
+                guard let data = data else { return }
+
+                do {
+                    if let datasourceDictionary = try PropertyListSerialization.propertyList(
+                        from: data,
+                        options: [],
+                        format: nil
+                    ) as? [String: AnyObject] {
+                        
+                        for (name, value) in datasourceDictionary {
+                            if let urlString = value as? String,
+                               let url = URL(string: urlString) {
+                                let photoRecord = PhotoRecord(name: name, url: url)
+                                self.photos.append(photoRecord)
+                            }
+                        }
+
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print("Property list parsing error: \(error.localizedDescription)")
+                }
+
+                // No need to reset network activity indicator
             }
-            
-            self.tableView.reloadData()
-          }
-        } catch let error as NSError {
-          print(error.domain)
-        }
-      }
-      UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }.resume()
     }
-  }
   
   fileprivate func startOperationsForPhotoRecord(photoDetails: PhotoRecord, indexPath: IndexPath){
     switch (photoDetails.state) {
@@ -112,10 +130,10 @@ class ListViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
-    
+      
     if cell.accessoryView == nil {
-      let indicator = UIActivityIndicatorView(style: .gray)
-      cell.accessoryView = indicator
+        let indicator = UIActivityIndicatorView(style: .medium)
+        cell.accessoryView = indicator
     }
     let indicator = cell.accessoryView as! UIActivityIndicatorView
     

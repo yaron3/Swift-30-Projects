@@ -53,5 +53,8 @@ class APIClient {
 extension URLSession: Sessionable { }
 
 protocol Sessionable {
-  func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+  func dataTask(
+    with url: URL,
+    completionHandler: @Sendable @escaping (Data?, URLResponse?, Error?) -> Void
+  ) -> URLSessionDataTask
 }
