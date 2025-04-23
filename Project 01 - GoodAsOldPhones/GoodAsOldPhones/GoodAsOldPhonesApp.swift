@@ -5,17 +5,45 @@ struct GoodAsOldPhonesApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ProductListView()
-                    .tabItem {
-                        Label("Products", systemImage: "list.bullet")
-                    }
+                NavigationStack {
+                    ProductListView()
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+                .tabItem {
+                    Label("Products", systemImage: "list.bullet")
+                }
                 
-                ContactView()
-                    .tabItem {
-                        Label("Us", systemImage: "person.2")
-                    }
+                NavigationStack {
+                    ContactView()
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+                .tabItem {
+                    Label("Us", systemImage: "person.2")
+                }
             }
+            .ignoresSafeArea()
+        }
+    }
+}
+
+#Preview {
+    TabView {
+        NavigationStack {
+            ProductListView()
+                .navigationBarTitleDisplayMode(.inline)
+        }
+        .tabItem {
+            Label("Products", systemImage: "list.bullet")
         }
         
+        NavigationStack {
+            ContactView()
+                .navigationBarTitleDisplayMode(.inline)
+        }
+        .tabItem {
+            Label("Us", systemImage: "person.2")
+        }
     }
-} 
+    .ignoresSafeArea()
+
+}

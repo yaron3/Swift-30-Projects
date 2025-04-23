@@ -9,6 +9,8 @@ struct ProductDetailView: View {
                 Image(product.fullscreenImageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity)
+                    .ignoresSafeArea(edges: .top)
                 
                 Text(product.name)
                     .font(.title)
@@ -26,5 +28,6 @@ struct ProductDetailView: View {
             .padding()
         }
         .navigationBarTitleDisplayMode(.inline)
+        .ignoresSafeArea(edges: .bottom)
     }
 } 

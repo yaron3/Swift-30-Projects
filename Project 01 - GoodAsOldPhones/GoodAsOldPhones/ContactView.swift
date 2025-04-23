@@ -3,10 +3,12 @@ import SwiftUI
 struct ContactView: View {
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(spacing: 20) {
                 Image("header-contact")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity)
+                    .ignoresSafeArea(edges: .top)
                 
                 Text("About Us")
                     .font(.title)
@@ -31,7 +33,10 @@ struct ContactView: View {
                 }
                 .padding()
             }
+            .padding(.vertical)
         }
+        .navigationTitle("About Us")
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 

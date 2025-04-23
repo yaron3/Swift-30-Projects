@@ -9,15 +9,14 @@ struct ProductListView: View {
     ]
     
     var body: some View {
-        NavigationStack {
-            List(products) { product in
-                NavigationLink(destination: ProductDetailView(product: product)) {
-                    ProductRowView(product: product)
-                }
+        List(products) { product in
+            NavigationLink(destination: ProductDetailView(product: product)) {
+                ProductRowView(product: product)
             }
-            .navigationTitle("Products")
         }
-        .ignoresSafeArea(edges: .top)
+        .navigationTitle("Products")
+        .listStyle(.plain)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 
@@ -36,8 +35,7 @@ struct ProductRowView: View {
         }
         .padding(.vertical, 8)
     }
-} 
-
+}
 
 #Preview{
     ProductListView()
