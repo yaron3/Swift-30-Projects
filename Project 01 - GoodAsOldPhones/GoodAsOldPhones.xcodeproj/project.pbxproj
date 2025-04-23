@@ -7,38 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19155F491C6AB48B00644FDF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19155F481C6AB48B00644FDF /* ContactViewController.swift */; };
-		19155F4B1C6C58FA00644FDF /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19155F4A1C6C58FA00644FDF /* ProductsTableViewController.swift */; };
 		19155F4D1C6DA38100644FDF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19155F4C1C6DA38100644FDF /* Product.swift */; };
-		197C210E1C6686EE00BCCAE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C210D1C6686EE00BCCAE8 /* AppDelegate.swift */; };
-		197C21101C6686EE00BCCAE8 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C210F1C6686EE00BCCAE8 /* ProductViewController.swift */; };
-		197C21131C6686EF00BCCAE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197C21111C6686EF00BCCAE8 /* Main.storyboard */; };
 		197C21151C6686EF00BCCAE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197C21141C6686EF00BCCAE8 /* Assets.xcassets */; };
-		197C21181C6686EF00BCCAE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197C21161C6686EF00BCCAE8 /* LaunchScreen.storyboard */; };
+		NEW1 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NEW2 /* ProductListView.swift */; };
+		NEW3 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NEW4 /* ProductDetailView.swift */; };
+		NEW5 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NEW6 /* ContactView.swift */; };
+		NEW7 /* GoodAsOldPhonesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = NEW8 /* GoodAsOldPhonesApp.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4A8EA33E2DB801990069BD9B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A8EA3382DB801990069BD9B /* FacebookMe.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 191803FD1EB67FC9007753C4;
-			remoteInfo = FacebookMe;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		19155F481C6AB48B00644FDF /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		19155F4A1C6C58FA00644FDF /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		19155F4C1C6DA38100644FDF /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		197C210A1C6686EE00BCCAE8 /* GoodAsOldPhones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodAsOldPhones.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		197C210D1C6686EE00BCCAE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		197C210F1C6686EE00BCCAE8 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		197C21121C6686EF00BCCAE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		197C21141C6686EF00BCCAE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		197C21171C6686EF00BCCAE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		197C21191C6686EF00BCCAE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A8EA3382DB801990069BD9B /* FacebookMe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FacebookMe.xcodeproj; path = "../Project 03 - FacebookMe/FacebookMe.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		NEW2 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		NEW4 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		NEW6 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		NEW8 /* GoodAsOldPhonesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodAsOldPhonesApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +40,6 @@
 		197C21011C6686EE00BCCAE8 = {
 			isa = PBXGroup;
 			children = (
-				4A8EA3382DB801990069BD9B /* FacebookMe.xcodeproj */,
 				197C210C1C6686EE00BCCAE8 /* GoodAsOldPhones */,
 				197C210B1C6686EE00BCCAE8 /* Products */,
 			);
@@ -72,25 +56,15 @@
 		197C210C1C6686EE00BCCAE8 /* GoodAsOldPhones */ = {
 			isa = PBXGroup;
 			children = (
-				197C210D1C6686EE00BCCAE8 /* AppDelegate.swift */,
-				197C210F1C6686EE00BCCAE8 /* ProductViewController.swift */,
-				19155F481C6AB48B00644FDF /* ContactViewController.swift */,
-				19155F4A1C6C58FA00644FDF /* ProductsTableViewController.swift */,
 				19155F4C1C6DA38100644FDF /* Product.swift */,
-				197C21111C6686EF00BCCAE8 /* Main.storyboard */,
+				NEW2 /* ProductListView.swift */,
+				NEW4 /* ProductDetailView.swift */,
+				NEW6 /* ContactView.swift */,
+				NEW8 /* GoodAsOldPhonesApp.swift */,
 				197C21141C6686EF00BCCAE8 /* Assets.xcassets */,
-				197C21161C6686EF00BCCAE8 /* LaunchScreen.storyboard */,
 				197C21191C6686EF00BCCAE8 /* Info.plist */,
 			);
 			path = GoodAsOldPhones;
-			sourceTree = "<group>";
-		};
-		4A8EA33B2DB801990069BD9B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4A8EA33F2DB801990069BD9B /* FacebookMe.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,12 +115,6 @@
 			mainGroup = 197C21011C6686EE00BCCAE8;
 			productRefGroup = 197C210B1C6686EE00BCCAE8 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4A8EA33B2DB801990069BD9B /* Products */;
-					ProjectRef = 4A8EA3382DB801990069BD9B /* FacebookMe.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				197C21091C6686EE00BCCAE8 /* GoodAsOldPhones */,
@@ -154,24 +122,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		4A8EA33F2DB801990069BD9B /* FacebookMe.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = FacebookMe.app;
-			remoteRef = 4A8EA33E2DB801990069BD9B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		197C21081C6686EE00BCCAE8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				197C21181C6686EF00BCCAE8 /* LaunchScreen.storyboard in Resources */,
 				197C21151C6686EF00BCCAE8 /* Assets.xcassets in Resources */,
-				197C21131C6686EF00BCCAE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,34 +138,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				197C21101C6686EE00BCCAE8 /* ProductViewController.swift in Sources */,
-				19155F4B1C6C58FA00644FDF /* ProductsTableViewController.swift in Sources */,
 				19155F4D1C6DA38100644FDF /* Product.swift in Sources */,
-				197C210E1C6686EE00BCCAE8 /* AppDelegate.swift in Sources */,
-				19155F491C6AB48B00644FDF /* ContactViewController.swift in Sources */,
+				NEW1 /* ProductListView.swift in Sources */,
+				NEW3 /* ProductDetailView.swift in Sources */,
+				NEW5 /* ContactView.swift in Sources */,
+				NEW7 /* GoodAsOldPhonesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		197C21111C6686EF00BCCAE8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				197C21121C6686EF00BCCAE8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		197C21161C6686EF00BCCAE8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				197C21171C6686EF00BCCAE8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		197C211A1C6686EF00BCCAE8 /* Debug */ = {
@@ -261,10 +198,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -328,13 +266,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoodAsOldPhones/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.GoodAsOldPhones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -344,13 +284,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoodAsOldPhones/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeschool.GoodAsOldPhones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
