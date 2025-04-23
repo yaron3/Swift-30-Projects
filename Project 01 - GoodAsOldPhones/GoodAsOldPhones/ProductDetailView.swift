@@ -9,9 +9,8 @@ struct ProductDetailView: View {
                 Image(product.fullscreenImageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity, maxHeight: 645)
                     .ignoresSafeArea(edges: .top)
-                
                 Text(product.name)
                     .font(.title)
                     .fontWeight(.bold)
@@ -28,6 +27,10 @@ struct ProductDetailView: View {
             .padding()
         }
         .navigationBarTitleDisplayMode(.inline)
-        .ignoresSafeArea(edges: .bottom)
+        .ignoresSafeArea(edges: .top)
     }
 } 
+
+#Preview{
+    ProductDetailView(product: Product(name: "1907 Wall Set", cellImageName: "image-cell1", fullscreenImageName: "phone-fullscreen1"))
+}
