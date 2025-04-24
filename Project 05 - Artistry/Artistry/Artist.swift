@@ -64,7 +64,7 @@ struct Artist: Identifiable {
                let workImageName = workObject["image"],
                let info = workObject["info"] {
               works.append(Work(title: workTitle, 
-                              image: workImageName + ".jpg",
+                              image: workImageName,
                               info: info))
             }
           }

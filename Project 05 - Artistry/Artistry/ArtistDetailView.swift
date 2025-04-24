@@ -53,7 +53,7 @@ struct WorkCardView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-          Image("Picaso1")//Image(work.image)
+          Image(work.image)
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity)
