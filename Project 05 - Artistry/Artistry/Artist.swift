@@ -20,15 +20,16 @@
  * THE SOFTWARE.
  */
 
-import UIKit
+import SwiftUI
 
-struct Artist {
+struct Artist: Identifiable {
+  let id = UUID()
   let name: String
   let bio: String
-  let image: UIImage
+  let image: String // Store image name instead of UIImage
   var works: [Work]
   
-  init(name: String, bio: String, image: UIImage, works: [Work]) {
+  init(name: String, bio: String, image: String, works: [Work]) {
     self.name = name
     self.bio = bio
     self.image = image
@@ -36,7 +37,6 @@ struct Artist {
   }
   
   static func artistsFromBundle() -> [Artist] {
-    
     var artists = [Artist]()
     
     guard let url = Bundle.main.url(forResource: "artists", withExtension: "json") else {
@@ -55,21 +55,21 @@ struct Artist {
       
       for artistObject in artistObjects {
         if let name = artistObject["name"] as? String,
-          let bio = artistObject["bio"]  as? String,
-          let imageName = artistObject["image"] as? String,
-          let image = UIImage(named: imageName),
-          let worksObject = artistObject["works"] as? [[String : String]]{
+           let bio = artistObject["bio"]  as? String,
+           let imageName = artistObject["image"] as? String,
+           let worksObject = artistObject["works"] as? [[String : String]] {
           var works = [Work]()
           for workObject in worksObject {
             if let workTitle = workObject["title"],
-              let workImageName = workObject["image"],
-              let workImage = UIImage(named: workImageName + ".jpg"),
-              let info = workObject["info"] {
-              works.append(Work(title: workTitle,image: workImage,info: info, isExpanded: false))
+               let workImageName = workObject["image"],
+               let info = workObject["info"] {
+              works.append(Work(title: workTitle, 
+                              image: workImageName + ".jpg",
+                              info: info))
             }
           }
           
-          let artist = Artist(name: name, bio: bio, image: image, works: works)
+          let artist = Artist(name: name, bio: bio, image: imageName, works: works)
           artists.append(artist)
         }
       }
@@ -79,5 +79,4 @@ struct Artist {
     
     return artists
   }
-  
 }

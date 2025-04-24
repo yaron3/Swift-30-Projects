@@ -20,18 +20,17 @@
  * THE SOFTWARE.
  */
 
-import UIKit
+import SwiftUI
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  
-  var window: UIWindow?
-  
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    UINavigationBar.appearance().tintColor = UIColor.white
-    return true
-  }
-  
+@main
+struct ArtistryApp: App {
+    @StateObject private var viewModel = ArtistViewModel()
+    
+    var body: some Scene {
+        WindowGroup {
+            ArtistListView()
+                .environmentObject(viewModel)
+        }
+    }
 }
 

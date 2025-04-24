@@ -20,11 +20,12 @@
  * THE SOFTWARE.
  */
 
-import UIKit
+import SwiftUI
 
-struct Work {
+struct Work: Identifiable {
+  let id = UUID()
   let title: String
-  let image: UIImage
+  let image: String // Store image name instead of UIImage
   let info: String
-  var isExpanded: Bool
+  var isExpanded: Bool = false
 }
