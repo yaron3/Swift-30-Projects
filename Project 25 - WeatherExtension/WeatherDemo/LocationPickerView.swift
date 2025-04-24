@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct LocationPickerView: View {
     @Environment(\.dismiss) private var dismiss
@@ -23,6 +24,10 @@ struct LocationPickerView: View {
                     selectedCountry = country
                     selectedImage = imageName
                     updateWeather()
+                    let sharedDefaults = UserDefaults(suiteName: "group.com.yaronj.weather.shared")
+                    sharedDefaults?.set(location, forKey: "location")
+                    sharedDefaults?.synchronize()
+                    WidgetCenter.shared.reloadTimelines(ofKind: "WeatherWidget")
                     dismiss()
                 }) {
                     HStack {

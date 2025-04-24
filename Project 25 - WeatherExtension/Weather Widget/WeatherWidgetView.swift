@@ -3,8 +3,8 @@ import WidgetKit
 
 struct WeatherWidgetView: View {
     let location: String
-    @State private var weather: String = ""
-    @State private var temperature: String = ""
+    @State private var weather: String = "Cloudy"
+    @State private var temperature: String = "15"
     @State private var imageName: String = ""
 
     var body: some View {
@@ -21,26 +21,28 @@ struct WeatherWidgetView: View {
 
                 HStack {
                     if !weather.isEmpty {
-                        Text(weather.capitalized)
+                        Text($weather.wrappedValue)
                             .font(.subheadline)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.primary)
+                            .fontWeight(.bold)
                     }
 
                     Spacer()
 
                     if !temperature.isEmpty {
-                        Text("\(temperature)°")
+                        Text("\($temperature.wrappedValue)°")
                             .font(.title2)
                             .bold()
                             .foregroundColor(.primary)
                     }
                 }
+
             }
-            .opacity(0.8)
             .padding()
+            .opacity(0.8)
         }
         .containerBackground(for: .widget) {
-            Color.clear // Or Color.background if you want a fallback
+            Color.blue // Or Color.background if you want a fallback
         }
         .onAppear {
             displayCurrentWeather()
@@ -69,3 +71,4 @@ struct WeatherWidgetView_Previews: PreviewProvider {
         }
     }
 }
+

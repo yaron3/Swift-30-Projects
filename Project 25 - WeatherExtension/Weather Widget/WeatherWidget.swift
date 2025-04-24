@@ -1,5 +1,6 @@
 import WidgetKit
 import SwiftUI
+import WeatherKit
 
 struct WeatherWidget: Widget {
     private let kind = "WeatherWidget"
@@ -7,10 +8,11 @@ struct WeatherWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: WeatherWidgetProvider()) { entry in
             WeatherWidgetView(location: entry.location)
+                .containerBackground(.clear, for: .widget)
         }
         .configurationDisplayName("Weather Widget")
         .description("Shows the current weather for your selected location.")
-        .supportedFamilies([.systemSmall])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
@@ -23,40 +25,44 @@ struct WeatherWidgetEntry: TimelineEntry {
 
 struct WeatherWidgetProvider: TimelineProvider {
     func placeholder(in context: Context) -> WeatherWidgetEntry {
-        WeatherWidgetEntry(date: Date(), location: "San Francisco, U.S.", weather: "Sunny", temperature: "22")
+        let sharedDefaults = UserDefaults(suiteName: "group.com.yaronj.weather.shared")
+        let location = sharedDefaults?.string(forKey: "location") ?? "San Francisco, U.S."
+        return WeatherWidgetEntry(date: Date(), location: location, weather: "Sunny", temperature: "22°")
     }
     
     func getSnapshot(in context: Context, completion: @escaping (WeatherWidgetEntry) -> Void) {
-        let entry = WeatherWidgetEntry(date: Date(), location: "San Francisco, U.S.", weather: "Sunny", temperature: "22")
-        completion(entry)
+        let sharedDefaults = UserDefaults(suiteName: "group.com.yaronj.weather.shared")
+        let location = sharedDefaults?.string(forKey: "location") ?? "San Francisco, U.S."
+        let components = location.split(separator: ",").map(String.init)
+        let city = components[0]
+        
+        WeatherService().getCurrentWeather(city) { currentWeather in
+            let entry = WeatherWidgetEntry(
+                date: Date(),
+                location: location,
+                weather: currentWeather?.weather ?? "?",
+                temperature: currentWeather != nil ? "\(currentWeather!.temperature)°" : "--"
+            )
+            completion(entry)
+        }
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<WeatherWidgetEntry>) -> Void) {
-        let location = "San Francisco, U.S."
+        let sharedDefaults = UserDefaults(suiteName: "group.com.yaronj.weather.shared")
+        let location = sharedDefaults?.string(forKey: "location") ?? "San Francisco, U.S."
+        let components = location.split(separator: ",").map(String.init)
+        let city = components[0]
         
-        WeatherService.sharedWeatherService().getCurrentWeather(location) { data in
-            let currentDate = Date()
-            let entry: WeatherWidgetEntry
-            
-            if let weatherData = data {
-                entry = WeatherWidgetEntry(
-                    date: currentDate,
-                    location: location,
-                    weather: weatherData.weather,
-                    temperature: String(weatherData.temperature)
-                )
-            } else {
-                entry = WeatherWidgetEntry(
-                    date: currentDate,
-                    location: location,
-                    weather: "Unknown",
-                    temperature: "--"
-                )
-            }
-            
-            let nextUpdate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
+        WeatherService().getCurrentWeather(city) { currentWeather in
+            let entry = WeatherWidgetEntry(
+                date: Date(),
+                location: location,
+                weather: currentWeather?.weather ?? "?",
+                temperature: currentWeather != nil ? "\(currentWeather!.temperature)°" : "--"
+            )
+            let nextUpdate = Calendar.current.date(byAdding: .minute, value: 15, to: Date())!
             let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
             completion(timeline)
         }
     }
-} 
+}
