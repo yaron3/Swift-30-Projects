@@ -4,22 +4,24 @@ struct LocationPickerView: View {
     @Environment(\.dismiss) private var dismiss
     @Binding var selectedCity: String
     @Binding var selectedCountry: String
+    @Binding var selectedImage: String
     @Binding var weather: String
     @Binding var temperature: String
     
-    let locations = ["Tel Aviv, Israel", "Paris, France", "Kyoto, Japan", "Sydney, Australia", "Seattle, U.S.", "New York, U.S.", "Hong Kong, Hong Kong", "Taipei, Taiwan", "London, U.K.", "Vancouver, Canada", "San Francisco, U.S."]
+    let locations = ["Paris, France", "Kyoto, Japan", "Sydney, Australia", "Seattle, U.S.", "New York, U.S.", "Hong Kong, Hong Kong", "Taipei, Taiwan", "London, U.K.", "Vancouver, Canada", "San Francisco, U.S.","Tel Aviv, Israel"]
     
     var body: some View {
-        
         NavigationView {
             List(locations, id: \.self) { location in
                 let components = location.split(separator: ",").map(String.init)
                 let city = components[0]
                 let country = components[1].trimmingCharacters(in: .whitespaces)
+                let imageName = city.replacingOccurrences(of: " ", with: "-").lowercased()
                 
                 Button(action: {
                     selectedCity = city
                     selectedCountry = country
+                    selectedImage = imageName
                     updateWeather()
                     dismiss()
                 }) {

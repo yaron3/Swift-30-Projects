@@ -4,19 +4,19 @@ import WeatherKit
 struct WeatherView: View {
     @State private var city = "San Francisco"
     @State private var country = "U.S."
+    @State private var selectedImage = "san-francisco"
     @State private var weather = ""
     @State private var temperature = ""
     @State private var showingLocationPicker = false
     
     var body: some View {
-        ZStack {
-           // Color.black.edgesIgnoringSafeArea(.all)
-            Image("bg")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-                //.opacity(0.3)
-            
-            NavigationStack {
+        NavigationStack {
+            ZStack {
+                Image($selectedImage.wrappedValue)
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                
                 VStack(spacing: 20) {
                     Text(city)
                         .font(.largeTitle)
@@ -50,13 +50,22 @@ struct WeatherView: View {
                     }
                 }
                 .padding()
-                .navigationTitle("Weather")
-                .sheet(isPresented: $showingLocationPicker) {
-                    LocationPickerView(selectedCity: $city, selectedCountry: $country, weather: $weather, temperature: $temperature)
-                }
-                .onAppear {
-                    displayCurrentWeather()
-                }
+                .background(Color.white.opacity(0.8))
+                .cornerRadius(12)
+                .padding()
+            }
+            .navigationTitle("Weather")
+            .sheet(isPresented: $showingLocationPicker) {
+                LocationPickerView(
+                    selectedCity: $city,
+                    selectedCountry: $country,
+                    selectedImage: $selectedImage,
+                    weather: $weather,
+                    temperature: $temperature
+                )
+            }
+            .onAppear {
+                displayCurrentWeather()
             }
         }
     }

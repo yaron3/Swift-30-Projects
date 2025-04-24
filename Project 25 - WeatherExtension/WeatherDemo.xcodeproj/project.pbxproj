@@ -26,6 +26,7 @@
 		4A8EA6042DBA229B0069BD9B /* WeatherWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA6002DBA229B0069BD9B /* WeatherWidgetView.swift */; };
 		4A8EA6052DBA229B0069BD9B /* WidgetEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA6022DBA229B0069BD9B /* WidgetEntryPoint.swift */; };
 		4A8EA6062DBA229B0069BD9B /* WeatherWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA5FF2DBA229B0069BD9B /* WeatherWidget.swift */; };
+		4A8EA6072DBA309B0069BD9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FCCF7B1A5F7DFF006183CC /* Images.xcassets */; };
 		F4FCCF7C1A5F7DFF006183CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FCCF7B1A5F7DFF006183CC /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		19B36D091D7E540600BE0903 /* WeatherKit */ = {
 			isa = PBXGroup;
 			children = (
+				F4FCCF7B1A5F7DFF006183CC /* Images.xcassets */,
 				19B36D0A1D7E540600BE0903 /* WeatherKit.h */,
 				19B36D0C1D7E540600BE0903 /* Info.plist */,
 			);
@@ -178,7 +180,6 @@
 				4A8EA5EB2DBA09BC0069BD9B /* WeatherData.swift */,
 				4A8EA5EC2DBA09BC0069BD9B /* WeatherService.swift */,
 				4A8EA5ED2DBA09BC0069BD9B /* WeatherView.swift */,
-				F4FCCF7B1A5F7DFF006183CC /* Images.xcassets */,
 				F4FCCF721A5F7DFF006183CC /* Supporting Files */,
 			);
 			path = WeatherDemo;
@@ -322,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8EA6072DBA309B0069BD9B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
