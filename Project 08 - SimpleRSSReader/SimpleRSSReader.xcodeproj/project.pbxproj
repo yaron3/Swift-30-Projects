@@ -3,18 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		195033821E470739009E6F1C /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195033811E470739009E6F1C /* FeedParser.swift */; };
-		F46F13CF1A8E0A6E00EEB477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F13CE1A8E0A6E00EEB477 /* AppDelegate.swift */; };
-		F46F13D41A8E0A6E00EEB477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46F13D21A8E0A6E00EEB477 /* Main.storyboard */; };
+		4AA17FE22DBB9F4600093AD8 /* SimpleRSSReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA17FE12DBB9F4600093AD8 /* SimpleRSSReaderApp.swift */; };
 		F46F13D61A8E0A6E00EEB477 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46F13D51A8E0A6E00EEB477 /* Images.xcassets */; };
-		F46F13D91A8E0A6E00EEB477 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46F13D71A8E0A6E00EEB477 /* LaunchScreen.xib */; };
 		F46F13E51A8E0A6F00EEB477 /* SimpleRSSReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F13E41A8E0A6F00EEB477 /* SimpleRSSReaderTests.swift */; };
-		F46F13EF1A8E11A900EEB477 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F13EE1A8E11A900EEB477 /* NewsTableViewController.swift */; };
-		F46F13F11A8E11BA00EEB477 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F13F01A8E11BA00EEB477 /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,18 +25,19 @@
 
 /* Begin PBXFileReference section */
 		195033811E470739009E6F1C /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
+		4AA17FE12DBB9F4600093AD8 /* SimpleRSSReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRSSReaderApp.swift; sourceTree = "<group>"; };
 		F46F13C91A8E0A6E00EEB477 /* SimpleRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46F13CD1A8E0A6E00EEB477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F46F13CE1A8E0A6E00EEB477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F46F13D31A8E0A6E00EEB477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F46F13D51A8E0A6E00EEB477 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F46F13D81A8E0A6E00EEB477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F46F13DE1A8E0A6F00EEB477 /* SimpleRSSReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleRSSReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46F13E31A8E0A6F00EEB477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F46F13E41A8E0A6F00EEB477 /* SimpleRSSReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRSSReaderTests.swift; sourceTree = "<group>"; };
-		F46F13EE1A8E11A900EEB477 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
-		F46F13F01A8E11BA00EEB477 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4AA17FD92DBB9EAD00093AD8 /* views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = views; sourceTree = "<group>"; };
+		4AA17FDE2DBB9F0A00093AD8 /* viewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = viewModels; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F46F13C61A8E0A6E00EEB477 /* Frameworks */ = {
@@ -60,24 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1950337F1E4706EA009E6F1C /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F46F13EE1A8E11A900EEB477 /* NewsTableViewController.swift */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		195033801E4706F4009E6F1C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F46F13F01A8E11BA00EEB477 /* NewsTableViewCell.swift */,
-				F46F13D21A8E0A6E00EEB477 /* Main.storyboard */,
-				F46F13D71A8E0A6E00EEB477 /* LaunchScreen.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		F46F13C01A8E0A6E00EEB477 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +78,9 @@
 		F46F13CB1A8E0A6E00EEB477 /* SimpleRSSReader */ = {
 			isa = PBXGroup;
 			children = (
-				F46F13CE1A8E0A6E00EEB477 /* AppDelegate.swift */,
-				1950337F1E4706EA009E6F1C /* ViewController */,
-				195033801E4706F4009E6F1C /* View */,
+				4AA17FE12DBB9F4600093AD8 /* SimpleRSSReaderApp.swift */,
+				4AA17FDE2DBB9F0A00093AD8 /* viewModels */,
+				4AA17FD92DBB9EAD00093AD8 /* views */,
 				F46F13D51A8E0A6E00EEB477 /* Images.xcassets */,
 				F46F13CC1A8E0A6E00EEB477 /* Supporting Files */,
 				195033811E470739009E6F1C /* FeedParser.swift */,
@@ -148,6 +127,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4AA17FD92DBB9EAD00093AD8 /* views */,
+				4AA17FDE2DBB9F0A00093AD8 /* viewModels */,
 			);
 			name = SimpleRSSReader;
 			productName = SimpleRSSReader;
@@ -218,8 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F46F13D41A8E0A6E00EEB477 /* Main.storyboard in Resources */,
-				F46F13D91A8E0A6E00EEB477 /* LaunchScreen.xib in Resources */,
 				F46F13D61A8E0A6E00EEB477 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,10 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA17FE22DBB9F4600093AD8 /* SimpleRSSReaderApp.swift in Sources */,
 				195033821E470739009E6F1C /* FeedParser.swift in Sources */,
-				F46F13EF1A8E11A900EEB477 /* NewsTableViewController.swift in Sources */,
-				F46F13CF1A8E0A6E00EEB477 /* AppDelegate.swift in Sources */,
-				F46F13F11A8E11BA00EEB477 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,25 +241,6 @@
 			targetProxy = F46F13DF1A8E0A6F00EEB477 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F46F13D21A8E0A6E00EEB477 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F46F13D31A8E0A6E00EEB477 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F46F13D71A8E0A6E00EEB477 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F46F13D81A8E0A6E00EEB477 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F46F13E61A8E0A6F00EEB477 /* Debug */ = {
@@ -393,12 +353,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KX4SCFN6HU;
 				INFOPLIST_FILE = SimpleRSSReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaronj.simpleRssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -408,12 +370,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KX4SCFN6HU;
 				INFOPLIST_FILE = SimpleRSSReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaronj.simpleRssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
