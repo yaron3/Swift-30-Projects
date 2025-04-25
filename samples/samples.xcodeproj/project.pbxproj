@@ -24,9 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A8EA2FB2DB801300069BD9B /* samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = samples.app; path = "/Users/yaronjackoby/projects/Swift-30-Projects/samples/build/Debug-iphoneos/samples.app"; sourceTree = "<absolute>"; };
-		4A8EA3082DB801310069BD9B /* samplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = samplesTests.xctest; path = "/Users/yaronjackoby/projects/Swift-30-Projects/samples/build/Debug-iphoneos/samples.app/PlugIns/samplesTests.xctest"; sourceTree = "<absolute>"; };
-		4A8EA3122DB801310069BD9B /* samplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = samplesUITests.xctest; path = "/Users/yaronjackoby/projects/Swift-30-Projects/samples/build/Debug-iphoneos/samplesUITests-Runner.app/PlugIns/samplesUITests.xctest"; sourceTree = "<absolute>"; };
 		4A8EA3252DB801550069BD9B /* GoodAsOldPhones.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoodAsOldPhones.xcodeproj; path = "../Project 01 - GoodAsOldPhones/GoodAsOldPhones.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4A8EA32D2DB8016A0069BD9B /* Stopwatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Stopwatch.xcodeproj; path = "../Project 02 - Stopwatch/Stopwatch.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4A8EA3402DB801A00069BD9B /* FacebookMe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FacebookMe.xcodeproj; path = "../Project 03 - FacebookMe/FacebookMe.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -57,6 +54,9 @@
 		4A8EA41A2DB802B90069BD9B /* SceneDetector.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SceneDetector.xcodeproj; path = "../Project 28 - SceneDetector/SceneDetector.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4A8EA4222DB802C80069BD9B /* Marslink.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = Marslink.xcworkspace; path = "../Project 29 - Marslink/Marslink.xcworkspace"; sourceTree = SOURCE_ROOT; };
 		4A8EA4232DB802D50069BD9B /* PhotoTagger.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = PhotoTagger.xcworkspace; path = "../Project 30 - PhotoTagger/PhotoTagger.xcworkspace"; sourceTree = SOURCE_ROOT; };
+		4A8EA6272DBAB4FA0069BD9B /* samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = samples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8EA6282DBAB4FA0069BD9B /* samplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = samplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8EA6292DBAB4FA0069BD9B /* samplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = samplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +117,9 @@
 				4A8EA41A2DB802B90069BD9B /* SceneDetector.xcodeproj */,
 				4A8EA4222DB802C80069BD9B /* Marslink.xcworkspace */,
 				4A8EA4232DB802D50069BD9B /* PhotoTagger.xcworkspace */,
+				4A8EA6272DBAB4FA0069BD9B /* samples.app */,
+				4A8EA6282DBAB4FA0069BD9B /* samplesTests.xctest */,
+				4A8EA6292DBAB4FA0069BD9B /* samplesUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,6 +305,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4A8EA62A2DBAB4FA0069BD9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,7 +331,7 @@
 			packageProductDependencies = (
 			);
 			productName = samples;
-			productReference = 4A8EA2FB2DB801300069BD9B /* samples.app */;
+			productReference = 4A8EA6272DBAB4FA0069BD9B /* samples.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4A8EA3072DB801310069BD9B /* samplesTests */ = {
@@ -341,7 +351,7 @@
 			packageProductDependencies = (
 			);
 			productName = samplesTests;
-			productReference = 4A8EA3082DB801310069BD9B /* samplesTests.xctest */;
+			productReference = 4A8EA6282DBAB4FA0069BD9B /* samplesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4A8EA3112DB801310069BD9B /* samplesUITests */ = {
@@ -361,7 +371,7 @@
 			packageProductDependencies = (
 			);
 			productName = samplesUITests;
-			productReference = 4A8EA3122DB801310069BD9B /* samplesUITests.xctest */;
+			productReference = 4A8EA6292DBAB4FA0069BD9B /* samplesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -427,6 +437,10 @@
 				{
 					ProductGroup = 4A8EA3B62DB8025A0069BD9B /* Products */;
 					ProjectRef = 4A8EA3B32DB8025A0069BD9B /* ClassicPhotos.xcodeproj */;
+				},
+				{
+					ProductGroup = 4A8EA62A2DBAB4FA0069BD9B /* Products */;
+					ProjectRef = 4A8EA3402DB801A00069BD9B /* FacebookMe.xcodeproj */;
 				},
 				{
 					ProductGroup = 4A8EA3D12DB802750069BD9B /* Products */;

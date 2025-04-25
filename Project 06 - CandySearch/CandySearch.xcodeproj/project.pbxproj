@@ -40,6 +40,7 @@
 			children = (
 				171E0C7C1B8E5B84001E6242 /* CandySearch */,
 				171E0C7B1B8E5B84001E6242 /* Products */,
+				171E0C8B1B8E5B84001E6242 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +60,6 @@
 				4A3370F92DBB5C7B00A5D2CB /* DetailView.swift */,
 				171E0CAD1B8E5C58001E6242 /* Candy.swift */,
 				171E0C861B8E5B84001E6242 /* Assets.xcassets */,
-				171E0C8B1B8E5B84001E6242 /* Info.plist */,
 			);
 			path = CandySearch;
 			sourceTree = "<group>";

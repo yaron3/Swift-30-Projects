@@ -16,7 +16,6 @@
 		4A8EA5E02DB93B810069BD9B /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA5DA2DB93B810069BD9B /* AddItemView.swift */; };
 		4A8EA5E22DB93BBC0069BD9B /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA5E12DB93BBC0069BD9B /* TodoApp.swift */; };
 		EE47EF252141DA5D00C76F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE47EF242141DA5D00C76F03 /* Assets.xcassets */; };
-		EE47EF282141DA5D00C76F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE47EF262141DA5D00C76F03 /* LaunchScreen.storyboard */; };
 		EE47EF412141DAA700C76F03 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47EF402141DAA700C76F03 /* ToDoItemTests.swift */; };
 		EE47EF432141DAE500C76F03 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47EF422141DAE500C76F03 /* ToDoItem.swift */; };
 		EE47EF462141DFDE00C76F03 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47EF452141DFDE00C76F03 /* LocationTests.swift */; };
@@ -57,7 +56,6 @@
 		4A8EA5E12DB93BBC0069BD9B /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		EE47EF1A2141DA5D00C76F03 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE47EF242141DA5D00C76F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EE47EF272141DA5D00C76F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE47EF292141DA5D00C76F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE47EF2E2141DA5D00C76F03 /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE47EF342141DA5D00C76F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +139,7 @@
 				EE47EF312141DA5D00C76F03 /* ToDoTests */,
 				19E866A622D180DE001FFAB1 /* ToDoUITests */,
 				EE47EF1B2141DA5D00C76F03 /* Products */,
+				EE47EF292141DA5D00C76F03 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,7 +158,6 @@
 			children = (
 				1962BCA8228768E8000130AD /* Network */,
 				EE47EF442141DAF000C76F03 /* Models */,
-				EE47EF3F2141DA8700C76F03 /* Storyboards */,
 				EE47EF3D2141DA7000C76F03 /* Others */,
 			);
 			path = ToDo;
@@ -180,17 +178,8 @@
 			children = (
 				EE9333A72155BC25006939C4 /* Constants.swift */,
 				EE47EF242141DA5D00C76F03 /* Assets.xcassets */,
-				EE47EF292141DA5D00C76F03 /* Info.plist */,
 			);
 			path = Others;
-			sourceTree = "<group>";
-		};
-		EE47EF3F2141DA8700C76F03 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				EE47EF262141DA5D00C76F03 /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		EE47EF442141DAF000C76F03 /* Models */ = {
@@ -339,7 +328,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE47EF282141DA5D00C76F03 /* LaunchScreen.storyboard in Resources */,
 				EE47EF252141DA5D00C76F03 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,17 +393,6 @@
 			targetProxy = EE47EF2F2141DA5D00C76F03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EE47EF262141DA5D00C76F03 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE47EF272141DA5D00C76F03 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		19E866AC22D180DE001FFAB1 /* Debug */ = {
