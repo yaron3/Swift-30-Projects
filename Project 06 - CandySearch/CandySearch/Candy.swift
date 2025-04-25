@@ -22,12 +22,20 @@
 
 import Foundation
 
-class Candy {
-  var category : String
-  var name : String
-  
-  init(category: String, name: String) {
-    self.category = category
-    self.name = name
-  }
+struct Candy: Identifiable {
+    let id = UUID()
+    let category: String
+    let name: String
+    
+    static let sampleCandies = [
+        Candy(category: "Chocolate", name: "Chocolate Bar"),
+        Candy(category: "Chocolate", name: "Chocolate Chip"),
+        Candy(category: "Chocolate", name: "Dark Chocolate"),
+        Candy(category: "Hard", name: "Lollipop"),
+        Candy(category: "Hard", name: "Candy Cane"),
+        Candy(category: "Hard", name: "Jaw Breaker"),
+        Candy(category: "Other", name: "Caramel"),
+        Candy(category: "Other", name: "Sour Chew"),
+        Candy(category: "Other", name: "Gummi Bear")
+    ]
 }
