@@ -33,7 +33,7 @@ class LibraryAPI: NSObject {
     return image!
   }
   
-  func downloadImage(_ notification: Notification) {
+  @objc func downloadImage(_ notification: Notification) {
     // retrieve info from notification
     let userInfo = (notification as NSNotification).userInfo as! [String: AnyObject]
     let pokeImageView = userInfo["pokeImageView"] as! UIImageView?

@@ -36,7 +36,7 @@ class MasterTableViewCell: UITableViewCell {
     
     indicator = UIActivityIndicatorView()
     indicator.center = CGPoint(x: pokeImageView.bounds.midX, y: pokeImageView.bounds.midY)
-    indicator.activityIndicatorViewStyle = .whiteLarge
+      indicator.style = .large
     indicator.startAnimating()
     pokeImageView.addSubview(indicator)
     

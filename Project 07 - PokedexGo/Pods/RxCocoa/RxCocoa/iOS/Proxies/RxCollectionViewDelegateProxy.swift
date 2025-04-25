@@ -8,28 +8,25 @@
 
 #if os(iOS) || os(tvOS)
 
-import Foundation
 import UIKit
-#if !RX_NO_MODULE
 import RxSwift
-#endif
 
 /// For more information take a look at `DelegateProxyType`.
-public class RxCollectionViewDelegateProxy
-    : RxScrollViewDelegateProxy
-    , UICollectionViewDelegate
-    , UICollectionViewDelegateFlowLayout {
+open class RxCollectionViewDelegateProxy
+    : RxScrollViewDelegateProxy {
 
     /// Typed parent object.
     public weak private(set) var collectionView: UICollectionView?
 
     /// Initializes `RxCollectionViewDelegateProxy`
     ///
-    /// - parameter parentObject: Parent object for delegate proxy.
-    public required init(parentObject: AnyObject) {
-        self.collectionView = (parentObject as! UICollectionView)
-        super.init(parentObject: parentObject)
+    /// - parameter collectionView: Parent object for delegate proxy.
+    public init(collectionView: UICollectionView) {
+        self.collectionView = collectionView
+        super.init(scrollView: collectionView)
     }
 }
+
+extension RxCollectionViewDelegateProxy: UICollectionViewDelegateFlowLayout {}
 
 #endif

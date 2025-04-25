@@ -31,23 +31,23 @@ class MasterViewController: UITableViewController {
   }
   
   fileprivate func setupUI() {
-    self.title = "精灵列表"
+    self.title = "Sprite List"
     
     definesPresentationContext = true
     
-    searchBar
-      .rx.text
-      .throttle(0.5, scheduler: MainScheduler.instance)
-      .subscribe(
-        onNext: { [unowned self] query in
-          if query?.characters.count == 0 {
-            self.filteredPokemons = self.pokemons
-          } else {
-            self.filteredPokemons = self.pokemons.filter{ $0.name.hasPrefix(query!) }
-          }
-          self.tableView.reloadData()
-        })
-      .addDisposableTo(disposeBag)
+    searchBar.rx.text
+      .orEmpty
+      .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] query in
+        guard let self = self else { return }
+        if query.isEmpty {
+          self.filteredPokemons = self.pokemons
+        } else {
+          self.filteredPokemons = self.pokemons.filter { $0.name.hasPrefix(query) }
+        }
+        self.tableView.reloadData()
+      })
+      .disposed(by: disposeBag)
   }
   
   func dismissKeyboard() {
