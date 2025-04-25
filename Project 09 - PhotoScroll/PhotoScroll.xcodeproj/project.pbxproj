@@ -8,21 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		481872F21C00CD06001C3658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481872F11C00CD06001C3658 /* Assets.xcassets */; };
-		481872F51C00CD06001C3658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481872F31C00CD06001C3658 /* LaunchScreen.storyboard */; };
 		4AA1800B2DBBA1CB00093AD8 /* PhotoScrollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1800A2DBBA1CB00093AD8 /* PhotoScrollApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		481872E71C00CD06001C3658 /* PhotoScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481872F11C00CD06001C3658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		481872F41C00CD06001C3658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		481872F61C00CD06001C3658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AA1800A2DBBA1CB00093AD8 /* PhotoScrollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScrollApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4AA180042DBBA14600093AD8 /* views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = views; sourceTree = "<group>"; };
-		4AA180052DBBA14E00093AD8 /* viewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = viewModels; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				4AA1800A2DBBA1CB00093AD8 /* PhotoScrollApp.swift */,
-				4AA180052DBBA14E00093AD8 /* viewModels */,
 				4AA180042DBBA14600093AD8 /* views */,
 				481872F11C00CD06001C3658 /* Assets.xcassets */,
-				481872F31C00CD06001C3658 /* LaunchScreen.storyboard */,
 				481872F61C00CD06001C3658 /* Info.plist */,
 			);
 			path = PhotoScroll;
@@ -84,7 +79,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				4AA180042DBBA14600093AD8 /* views */,
-				4AA180052DBBA14E00093AD8 /* viewModels */,
 			);
 			name = PhotoScroll;
 			productName = PhotoScroll;
@@ -131,7 +125,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481872F51C00CD06001C3658 /* LaunchScreen.storyboard in Resources */,
 				481872F21C00CD06001C3658 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,17 +141,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		481872F31C00CD06001C3658 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				481872F41C00CD06001C3658 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		481872F71C00CD06001C3658 /* Debug */ = {
