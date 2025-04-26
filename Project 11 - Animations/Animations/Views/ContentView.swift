@@ -19,24 +19,20 @@ struct ContentView: View {
     ]
     
     @State private var selectedItem: AnimationItem?
-    @State private var isShowingDetail = false
     
     var body: some View {
         NavigationView {
             List(items) { item in
                 Button(action: {
                     selectedItem = item
-                    isShowingDetail = true
                 }) {
                     Text(item.title)
                         .foregroundColor(.primary)
                 }
             }
             .navigationTitle("Basic Animations")
-            .sheet(isPresented: $isShowingDetail) {
-                if let item = selectedItem {
-                    DetailView(animationItem: item)
-                }
+            .sheet(item: $selectedItem) { item in
+                DetailView(animationItem: item)
             }
         }
     }

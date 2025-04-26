@@ -7,7 +7,7 @@ struct MultiColorAnimationView: AnimationViewProtocol {
     var body: some View {
         Rectangle()
             .fill(currentColor)
-            .onChange(of: isAnimating) { newValue in
+            .onChange(of: isAnimating) { _, newValue in
                 if newValue {
                     withAnimation(.easeInOut(duration: animationDuration)) {
                         currentColor = .green

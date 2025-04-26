@@ -18,14 +18,12 @@ struct FadeAnimationView: AnimationViewProtocol {
                     .transition(.opacity)
             }
         }
-        .onChange(of: isAnimating) { newValue in
-            if newValue {
+        .onChange(of: isAnimating) { _, newValue in
+            
                 withAnimation(.easeInOut(duration: animationDuration)) {
                     showSecondImage.toggle()
                 }
-            } else {
-                showSecondImage = false
-            }
+
         }
     }
 } 

@@ -7,19 +7,23 @@ struct ColorAnimationView: AnimationViewProtocol {
     var body: some View {
         Rectangle()
             .fill(currentColor)
-            .onChange(of: isAnimating) { newValue in
-                if newValue {
+            .onChange(of: isAnimating) { oldValue, newValue in
+                if newValue != oldValue {
                     withAnimation(.easeInOut(duration: animationDuration)) {
-                        currentColor = .green
-                    }
-                } else {
-                    withAnimation(.easeInOut(duration: animationDuration)) {
-                        currentColor = .red
+                        if currentColor == .red {
+                            currentColor = .orange
+                        } else if currentColor == .orange {
+                            currentColor = .yellow
+                        } else if currentColor == .yellow {
+                            currentColor = .green
+                        } else {
+                            currentColor = .red
+                        }
                     }
                 }
             }
     }
-} 
+}
 #Preview {
     ColorAnimationView(isAnimating: true)
         .frame(width: 200, height: 200)

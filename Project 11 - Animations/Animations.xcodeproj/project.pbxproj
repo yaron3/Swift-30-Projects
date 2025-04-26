@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		192BA1221CD332C500117FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192BA1211CD332C500117FF6 /* Assets.xcassets */; };
-		192BA1251CD332C500117FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192BA1231CD332C500117FF6 /* LaunchScreen.storyboard */; };
 		192BA1301CD332C500117FF6 /* AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192BA12F1CD332C500117FF6 /* AnimationsTests.swift */; };
 		192BA13B1CD332C500117FF6 /* AnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192BA13A1CD332C500117FF6 /* AnimationsUITests.swift */; };
 		1988E89A1CD6801E003E143B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988E8991CD6801E003E143B /* Common.swift */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		192BA1171CD332C500117FF6 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		192BA1211CD332C500117FF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		192BA1241CD332C500117FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		192BA1261CD332C500117FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		192BA12B1CD332C500117FF6 /* AnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192BA12F1CD332C500117FF6 /* AnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTests.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				4AA1801B2DBC143D00093AD8 /* Views */,
 				1988E8991CD6801E003E143B /* Common.swift */,
 				192BA1211CD332C500117FF6 /* Assets.xcassets */,
-				192BA1231CD332C500117FF6 /* LaunchScreen.storyboard */,
 				192BA1261CD332C500117FF6 /* Info.plist */,
 			);
 			path = Animations;
@@ -235,7 +232,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192BA1251CD332C500117FF6 /* LaunchScreen.storyboard in Resources */,
 				192BA1221CD332C500117FF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,17 +292,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		192BA1231CD332C500117FF6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				192BA1241CD332C500117FF6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		192BA13D1CD332C500117FF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -358,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -410,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -424,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Animations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,7 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Animations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

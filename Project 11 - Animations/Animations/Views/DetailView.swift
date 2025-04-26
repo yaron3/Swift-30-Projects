@@ -7,12 +7,18 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
+            Text(animationItem.title)
+                .font(.headline)
+                .padding(.top,3)
+            Text(animationItem.description)
+                .font(.subheadline)
+            Spacer()
             animationView
                 .frame(width: 100, height: 100)
                 .onAppear {
                     isAnimating = true
                 }
-            
+            Spacer()
             Button("Animate") {
                 withAnimation {
                     isAnimating.toggle()
