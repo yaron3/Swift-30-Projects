@@ -3,18 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		192BA11B1CD332C500117FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192BA11A1CD332C500117FF6 /* AppDelegate.swift */; };
-		192BA11D1CD332C500117FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192BA11C1CD332C500117FF6 /* ViewController.swift */; };
-		192BA1201CD332C500117FF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192BA11E1CD332C500117FF6 /* Main.storyboard */; };
 		192BA1221CD332C500117FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192BA1211CD332C500117FF6 /* Assets.xcassets */; };
 		192BA1251CD332C500117FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192BA1231CD332C500117FF6 /* LaunchScreen.storyboard */; };
 		192BA1301CD332C500117FF6 /* AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192BA12F1CD332C500117FF6 /* AnimationsTests.swift */; };
 		192BA13B1CD332C500117FF6 /* AnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192BA13A1CD332C500117FF6 /* AnimationsUITests.swift */; };
-		1988E8981CD673E9003E143B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988E8971CD673E9003E143B /* DetailViewController.swift */; };
 		1988E89A1CD6801E003E143B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988E8991CD6801E003E143B /* Common.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +33,6 @@
 
 /* Begin PBXFileReference section */
 		192BA1171CD332C500117FF6 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		192BA11A1CD332C500117FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		192BA11C1CD332C500117FF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		192BA11F1CD332C500117FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		192BA1211CD332C500117FF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		192BA1241CD332C500117FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		192BA1261CD332C500117FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,9 +42,12 @@
 		192BA1361CD332C500117FF6 /* AnimationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192BA13A1CD332C500117FF6 /* AnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsUITests.swift; sourceTree = "<group>"; };
 		192BA13C1CD332C500117FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1988E8971CD673E9003E143B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1988E8991CD6801E003E143B /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4AA1801B2DBC143D00093AD8 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		192BA1141CD332C500117FF6 /* Frameworks */ = {
@@ -101,11 +97,8 @@
 		192BA1191CD332C500117FF6 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				192BA11A1CD332C500117FF6 /* AppDelegate.swift */,
-				192BA11C1CD332C500117FF6 /* ViewController.swift */,
-				1988E8971CD673E9003E143B /* DetailViewController.swift */,
+				4AA1801B2DBC143D00093AD8 /* Views */,
 				1988E8991CD6801E003E143B /* Common.swift */,
-				192BA11E1CD332C500117FF6 /* Main.storyboard */,
 				192BA1211CD332C500117FF6 /* Assets.xcassets */,
 				192BA1231CD332C500117FF6 /* LaunchScreen.storyboard */,
 				192BA1261CD332C500117FF6 /* Info.plist */,
@@ -145,6 +138,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4AA1801B2DBC143D00093AD8 /* Views */,
 			);
 			name = Animations;
 			productName = Animations;
@@ -241,7 +237,6 @@
 			files = (
 				192BA1251CD332C500117FF6 /* LaunchScreen.storyboard in Resources */,
 				192BA1221CD332C500117FF6 /* Assets.xcassets in Resources */,
-				192BA1201CD332C500117FF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1988E89A1CD6801E003E143B /* Common.swift in Sources */,
-				1988E8981CD673E9003E143B /* DetailViewController.swift in Sources */,
-				192BA11D1CD332C500117FF6 /* ViewController.swift in Sources */,
-				192BA11B1CD332C500117FF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		192BA11E1CD332C500117FF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				192BA11F1CD332C500117FF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		192BA1231CD332C500117FF6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Animations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Animations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
