@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1931198D20D35E380079AC04 /* StopwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1931198C20D35E380079AC04 /* StopwatchTests.swift */; };
-		197BEE1E1C76E410005AD5E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197BEE1C1C76E410005AD5E2 /* Main.storyboard */; };
 		197BEE201C76E410005AD5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197BEE1F1C76E410005AD5E2 /* Assets.xcassets */; };
-		197BEE231C76E410005AD5E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197BEE211C76E410005AD5E2 /* LaunchScreen.storyboard */; };
 		4A8EA42A2DB8EC520069BD9B /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4292DB8EC520069BD9B /* StopwatchModel.swift */; };
 		4A8EA42B2DB8EC520069BD9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4272DB8EC520069BD9B /* ContentView.swift */; };
 		4A8EA42C2DB8EC520069BD9B /* StopwatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA4282DB8EC520069BD9B /* StopwatchApp.swift */; };
@@ -31,9 +29,7 @@
 		1931198C20D35E380079AC04 /* StopwatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchTests.swift; sourceTree = "<group>"; };
 		1931198E20D35E380079AC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		197BEE151C76E410005AD5E2 /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		197BEE1D1C76E410005AD5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		197BEE1F1C76E410005AD5E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		197BEE221C76E410005AD5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		197BEE241C76E410005AD5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8EA4272DB8EC520069BD9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A8EA4282DB8EC520069BD9B /* StopwatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchApp.swift; sourceTree = "<group>"; };
@@ -88,12 +84,10 @@
 		197BEE171C76E410005AD5E2 /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
-				197BEE1C1C76E410005AD5E2 /* Main.storyboard */,
 				4A8EA4272DB8EC520069BD9B /* ContentView.swift */,
 				4A8EA4282DB8EC520069BD9B /* StopwatchApp.swift */,
 				4A8EA4292DB8EC520069BD9B /* StopwatchModel.swift */,
 				197BEE1F1C76E410005AD5E2 /* Assets.xcassets */,
-				197BEE211C76E410005AD5E2 /* LaunchScreen.storyboard */,
 				197BEE241C76E410005AD5E2 /* Info.plist */,
 			);
 			path = Stopwatch;
@@ -192,9 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				197BEE231C76E410005AD5E2 /* LaunchScreen.storyboard in Resources */,
 				197BEE201C76E410005AD5E2 /* Assets.xcassets in Resources */,
-				197BEE1E1C76E410005AD5E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,25 +220,6 @@
 			targetProxy = 1931198F20D35E380079AC04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		197BEE1C1C76E410005AD5E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				197BEE1D1C76E410005AD5E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		197BEE211C76E410005AD5E2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				197BEE221C76E410005AD5E2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1931199220D35E380079AC04 /* Debug */ = {
